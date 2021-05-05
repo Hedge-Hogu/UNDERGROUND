@@ -1,0 +1,14 @@
+
+public class Prac2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int[] result;
+		int[] result2= {1};
+		
+		int[] result = result2;
+		
+		System.out.println(result2[0]);
+	}
+
+}

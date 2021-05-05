@@ -1,0 +1,48 @@
+
+abstract class CDPlayer {
+	boolean pause;
+	int currentPos;
+	
+	CDPlayer() {
+		pause = false;
+		currentPos=0;
+	}
+	
+	abstract void play(int pos);
+	abstract void stop();
+	
+	void play() {
+		play(currentPos);
+	}
+	
+	void pause() {
+		if(pause) {
+			pause = false;
+			play(currentPos);
+		} else {
+			pause = true;
+			stop();
+		}
+	}
+}
+
+public class CDPlayer extends Player {
+	
+	void play(int currentPos) {
+		/* 실제 구현 내용 생략 */
+	}
+	
+	void stop() {
+		/* 실제 구현 내용 생략 */
+	}
+	int currentTrack;
+	
+	void nextTrack() {
+		currentTrack++;
+	}
+	public static void main(String[] args) {
+		CDPlayer cdp = new CDPlayer();
+		System.out.println(cdp.currentTrack);
+	}
+}
+

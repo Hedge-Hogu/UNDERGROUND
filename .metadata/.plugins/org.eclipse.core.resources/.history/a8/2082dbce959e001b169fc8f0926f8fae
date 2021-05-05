@@ -1,0 +1,57 @@
+import java.io.*;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.rmi.ConnectException;
+import java.util.Scanner;
+
+public class TcpIpClient {
+	public static void main(String[] args) {
+		
+		String serverIp = "127.0.0.1";
+		System.out.println("서버에 연결중입니다. 서버IP :"+serverIp);
+		
+		try {
+			Socket socket = new Socket(serverIp, 7777);
+			
+			InputStream in = socket.getInputStream();
+			DataInputStream dis = new DataInputStream(in);
+			
+			System.out.println("서버로부터 받은 메시지 :"+dis.readUTF());
+			
+			OutputStream out = socket.getOutputStream();
+			DataOutputStream dos = new DataOutputStream(out);
+			
+			Scanner s = new Scanner(System.in);
+			
+			System.out.print(">>");
+			String line = s.nextLine();
+			
+			if(line.trim().toLowerCase().equals("q")) {
+				dis.close();
+				dos.close();
+				socket.close();
+				System.exit(0);
+			}
+			dos.writeUTF(line);
+//				dis.close();
+//				socket.close();
+		} catch (ConnectException ce) {
+			ce.printStackTrace();
+		} catch (IOException ie) {
+			ie.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}
+			
+//			System.out.println("연결을 종료합니다.");
+			
+//			System.out.println("연결이 종료되었습니다.");
+			
+	} // main
+
+} // class

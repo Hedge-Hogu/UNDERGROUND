@@ -1,0 +1,9 @@
+package main;
+
+public class MainAspectWithCache {
+
+	public static void main(String[] args) {
+
+	}
+
+}

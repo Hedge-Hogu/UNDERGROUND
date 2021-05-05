@@ -1,0 +1,27 @@
+import java.util.*;
+import java.util.stream.*;;
+
+public class StreamEx1 {
+	public static void main(String[] args) {
+		
+	}
+}
+class Student implements Comparable<Student> {
+	String name;
+	int ban;
+	int totalScore;
+	
+	Student(String name, int ban, int totalScore) {
+		this.name=name;
+		this.ban =ban;
+		this.totalScore=totalScore;
+	}
+	
+	
+
+	@Override
+	public int compareTo(Student o) {
+		return 0;
+	}
+	
+}

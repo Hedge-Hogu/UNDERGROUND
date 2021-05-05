@@ -1,0 +1,32 @@
+package chap07;
+
+public class ImpeCalculator implements Calculator{
+	
+	public static void main(String[] args) {
+		ImpeCalculator calculator = new ImpeCalculator();
+		calculator.factorial(7);
+	}
+	
+
+	@Override
+	public long factorial(long num) {
+		long result = 1;
+		for(long i=1; i<=num; i++) {
+			result *=i;
+			System.out.print(i+"*");
+		}
+		System.out.println("="+result);
+		
+		long result2 =1;
+		for(long i=1; i<=num; num--) {
+			result2 *= num;
+			System.out.print(num+"*");
+			
+		}
+		System.out.println("="+result2);
+		
+		
+		return 0;
+	}
+
+}

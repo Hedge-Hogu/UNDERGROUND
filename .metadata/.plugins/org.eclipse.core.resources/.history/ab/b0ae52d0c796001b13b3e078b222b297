@@ -1,0 +1,13 @@
+import java.io.*;
+import java.io.FileNotFoundException;
+
+public class Ex15_0 {
+	public static void main(String[] args) throws Exception {
+//		FileInputStream fis = new FileInputStream("test.txt");
+//		BufferedInputStream bis = new BufferedInputStream(fis);
+//		System.out.println(bis.read());
+		
+		System.out.println(Byte.MAX_VALUE);
+	}
+
+}

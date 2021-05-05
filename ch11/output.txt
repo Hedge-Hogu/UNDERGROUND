@@ -1,0 +1,6 @@
+#Properties Example
+#Wed Feb 24 21:14:43 KST 2021
+capacity=10
+size=10
+timeout=30
+language=\uD55C\uAE00

@@ -1,0 +1,12 @@
+package chap07;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCfg.class);
+		
+		ctx.getBean(ExeTimeCalculator.class).factorial(20);
+		
+	}
+}

@@ -1,0 +1,4 @@
+#Mon Feb 22 16:04:36 KST 2021
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=IgnoreCase

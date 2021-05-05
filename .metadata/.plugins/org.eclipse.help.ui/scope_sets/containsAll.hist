@@ -1,0 +1,4 @@
+#Wed Feb 17 22:10:57 KST 2021
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=containsAll

@@ -1,0 +1,12 @@
+import java.util.stream.Stream;
+
+public class Ex14_0 {
+	public static void main(String[] args) {
+		Stream<String> strStream = Stream.of("dd", "aaa", "CC", "cc", "b");
+		strStream.sorted().forEach(System.out::print);
+	}
+
+}
+
+
+

@@ -1,0 +1,43 @@
+import java.io.*;
+import java.net.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class TcpIpServer4 implements Runnable{
+	ServerSocket serverSocket;
+	Thread[] threadArr;
+	
+	public static void main(String[] args) {
+		
+		
+	} // main
+	
+	
+	
+
+	public TcpIpServer4(int num) {
+		try {
+			serverSocket = new ServerSocket(7777);
+			System.out.println();
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+
+
+
+	@Override
+	public void run() {
+	}
+	
+	static String getTime() {
+		SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
+		return f.format(new Date());
+	}
+
+}

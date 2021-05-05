@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Exercise16_3.java&apos; to &apos;SourceViewer.java&apos;&#x0D;&#x0A;- Original project: &apos;ch16&apos;&#x0D;&#x0A;- Original element: &apos;Exercise16_3.java&apos;&#x0D;&#x0A;- Renamed element: &apos;SourceViewer.java&apos;" description="Rename compilation unit &apos;Exercise16_3.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Exercise16_3.java" name="SourceViewer.java" references="false" stamp="1618752057479" version="1.0"/>
+</session>

@@ -1,0 +1,15 @@
+package main;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import chap07.Calculator;
+
+public class MainAspectWithCache {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		
+		Calculator cal = ctx.getBean("calculator", Calculator.class);
+	}
+
+}
