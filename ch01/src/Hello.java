@@ -2,19 +2,19 @@
 public class Hello {
 
 	public static void main(String[] args) {
-		// ctrl+shift+L ´ÜÃàÅ° ÀüÃ¼ ¸ñ·Ïº¸±â
+		// ctrl+shift+L ï¿½ï¿½ï¿½ï¿½Å° ï¿½ï¿½Ã¼ ï¿½ï¿½Ïºï¿½ï¿½ï¿½
 		// ctrl+ +, -
-		// ctrl+D ÇÑ ÁÙ »èÁ¦
-		// ctrl+alt+shift+down Çà´ÜÀ§ º¹»ç
-		// alt+shift+A ¸ÖÆ¼ÄÃ·³ ÆíÁý
-		// alt+up, down Çà´ÜÀ§ ÀÌµ¿
-		// ctrl+i ÀÚµ¿ µé¿©¾²±â(ÀÚµ¿À¸·Î ¸ÂÃçÁÜ)
-		// ctrl+/ ÁÖ¼®(Åä±Û) -> ÇÑÁÙ ÁÖ¼®
-		// ctrl+space ÀÚµ¿¿Ï¼º
-//		ctrl+/ ¶óÀÎ ´ÜÀ§·Î ÁÖ¼® Ã³¸®
-		// ctrl + shift + o import ÀÚµ¿À¸·Î ºÒ·¯¿À±â
+		// ctrl+D ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		// ctrl+alt+shift+down ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		// alt+shift+A ï¿½ï¿½Æ¼ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½
+		// alt+up, down ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+		// ctrl+i ï¿½Úµï¿½ ï¿½é¿©ï¿½ï¿½ï¿½ï¿½(ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+		// ctrl+/ ï¿½Ö¼ï¿½(ï¿½ï¿½ï¿½) -> ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½
+		// ctrl+space ï¿½Úµï¿½ï¿½Ï¼ï¿½
+//		ctrl+/ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ Ã³ï¿½ï¿½
+		// ctrl + shift + o import ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println();
-		System.out.println("/*ÁÖ¼® ¾Æ´Ô*/");
+		System.out.println("/*ï¿½Ö¼ï¿½ ï¿½Æ´ï¿½*/");
 		System.out.println("Hell,world.");
 		System.out.println("Hell,world.");
 		System.out.println("Hell,world.");

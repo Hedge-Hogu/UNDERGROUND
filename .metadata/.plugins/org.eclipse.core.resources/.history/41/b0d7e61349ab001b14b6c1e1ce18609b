@@ -1,9 +1,0 @@
-package spring;
-
-public class MainForCPS {
-
-	public static void main(String[] args) {
-
-	}
-
-}
