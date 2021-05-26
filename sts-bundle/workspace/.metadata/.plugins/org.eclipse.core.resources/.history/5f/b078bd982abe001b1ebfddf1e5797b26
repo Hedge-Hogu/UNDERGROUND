@@ -1,0 +1,31 @@
+package com.mall.domain;
+
+import java.util.Date;
+
+public class MemberVO {
+	/*
+	CREATE TABLE tbl_member (
+			userId 	 VARCHAR(50)  NOT NULL,
+			userPass  VARCHAR(100) NOT NULL,
+			userName	 VARCHAR(30)  NOT NULL,
+			userPhon	 VARCHAR(20)  NOT NULL,
+			userAddr1 VARCHAR(20)  NULL,
+			userAddr2 VARCHAR(50)  NULL,
+			USERAddr3 VARCHAR(50)  NULL,
+			regDate	 DATE			  DEFAULT SYSDATE(),
+			verify	 int       DEFAULT 0,
+			PRIMARY KEY(userId)
+		);
+	*/
+	
+	private String userId;
+	private String userPass;
+	private String userName;
+	private String userPhon;
+	private String userAddr1;
+	private String userAddr2;
+	private String USERAddr3;
+	private Date regDate;
+	private int verify;
+
+}

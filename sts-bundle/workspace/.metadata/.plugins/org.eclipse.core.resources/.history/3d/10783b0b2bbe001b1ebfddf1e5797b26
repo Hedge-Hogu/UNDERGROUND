@@ -1,0 +1,19 @@
+package com.mall.domain;
+
+public class GoodsVO {
+	/*
+	CREATE TABLE tbl_goods (
+			gdsNum		int	NOT NULL,
+			gdsName		VARCHAR(50)		NOT NULL,
+			cateCode	VARCHAR(30)		NOT NULL,
+			gdsPrice	INT				NOT NULL,
+			gdsStock	INT				NULL,
+			gdsDes		VARCHAR(500)	NULL,
+			gdsImg		VARCHAR(200)	NULL,
+			gdsDate		DATE			DEFAULT SYSDATE()mallmallmallmall,
+			PRIMARY 	KEY (gdsNum)
+		);
+	*/
+	
+	private int 
+}
