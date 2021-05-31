@@ -11,3 +11,20 @@
 1622037056697	Rename package 'com.kubg.dao'
 1622037068046	Rename package 'com.kubg.domain'
 1622037077860	Rename package 'com.kubg.service'
+1622093923199	Rename resource 'kubgMapper.xml'
+1622093980284	Delete element
+1622095370908	Delete element
+1622103513329	Copy file
+1622103620896	Delete element
+1622103627305	Rename resource 'home.jsp'
+1622170702452	Copy file
+1622173682408	Copy compilation unit
+1622173738716	Delete element
+1622173740966	Copy compilation unit
+1622173898482	Move compilation unit
+1622173915375	Move compilation unit
+1622182814460	Move compilation unit
+1622182820033	Move compilation unit
+1622190312218	Copy elements
+1622190326062	Rename resource 'home.jsp'
+1622190667753	Rename resource 'index'

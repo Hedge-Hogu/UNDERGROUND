@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.mappers.adminMapper">
+
+	<!-- 카테고리 호출 -->
+	<select id="category" resultType="com.mall.domain.CategoryVO">
+		WITH TBL AS(
+		SELECT '무기' AS cateName , 100 AS cateCode, NULL AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '돌격소총' AS cateName , 101 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '기관단총' AS cateName , 102 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '경기관총' AS cateName , 103 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '산탄총' AS cateName , 104 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '지정사수소총' AS cateName , 105 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '저격소총' AS cateName , 106 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '기타' AS cateName , 107 AS cateCode, 100 AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '탄' AS cateName , 200 AS cateCode, NULL AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '방어구' AS cateName , 300 AS cateCode, NULL AS cateCodeRef FROM dual
+		UNION ALL
+		SELECT '회복제' AS cateName , 400 AS cateCode, NULL AS cateCodeRef FROM dual
+		)
+		SELECT 1 AS level, cateName, cateCode, cateCodeRef FROM TBL WHERE
+		cateCodeRef is NULL
+		UNION ALL
+		SELECT 2 AS level, cateName, cateCode, cateCodeRef FROM TBL WHERE
+		cateCodeRef IS NOT null
+		ORDER BY cateCode
+	</select>
+
+</mapper>
+

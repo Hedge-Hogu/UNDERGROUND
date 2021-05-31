@@ -5,15 +5,15 @@ import java.util.Date;
 public class MemberVO {
 	/*
 	CREATE TABLE tbl_member (
-			userId 	 VARCHAR(50)  NOT NULL,
+			userId 	  VARCHAR(50)  NOT NULL,
 			userPass  VARCHAR(100) NOT NULL,
-			userName	 VARCHAR(30)  NOT NULL,
-			userPhon	 VARCHAR(20)  NOT NULL,
+			userName  VARCHAR(30)  NOT NULL,
+			userPhon  VARCHAR(20)  NOT NULL,
 			userAddr1 VARCHAR(20)  NULL,
 			userAddr2 VARCHAR(50)  NULL,
-			USERAddr3 VARCHAR(50)  NULL,
-			regDate	 DATE			  DEFAULT SYSDATE(),
-			verify	 int       DEFAULT 0,
+			userAddr3 VARCHAR(50)  NULL,
+			regDate	  DATE		   DEFAULT SYSDATE(),
+			verify	  int          DEFAULT 0,
 			PRIMARY KEY(userId)
 		);
 	*/
@@ -23,7 +23,7 @@ public class MemberVO {
 	private String userPhon;
 	private String userAddr1;
 	private String userAddr2;
-	private String USERAddr3;
+	private String userAddr3;
 	private Date regDate;
 	private int verify;
 	
@@ -63,11 +63,11 @@ public class MemberVO {
 	public void setUserAddr2(String userAddr2) {
 		this.userAddr2 = userAddr2;
 	}
-	public String getUSERAddr3() {
-		return USERAddr3;
+	public String getUserAddr3() {
+		return userAddr3;
 	}
-	public void setUSERAddr3(String uSERAddr3) {
-		USERAddr3 = uSERAddr3;
+	public void setUserAddr3(String userAddr3) {
+		this.userAddr3 = userAddr3;
 	}
 	public Date getRegDate() {
 		return regDate;
