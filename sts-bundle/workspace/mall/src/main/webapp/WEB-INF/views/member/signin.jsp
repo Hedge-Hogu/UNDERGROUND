@@ -28,12 +28,14 @@
 				<section id="content">
 					<form role="form" method="post" autocomplete="off">
 						<div class="input_area">
-							<label for="userId">아이디</label> <input type="email" id="userId"
-								name="userId" required="required" />
+							<label for="userId">아이디</label> 
+							<input type="email" id="userId"
+								name="userId" required="required"/>
 						</div>
 
 						<div class="input_area">
-							<label for="userPass">패스워드</label> <input type="password"
+							<label for="userPass">패스워드</label> 
+							<input type="password"
 								id="userPass" name="userPass" required="required" />
 						</div>
 

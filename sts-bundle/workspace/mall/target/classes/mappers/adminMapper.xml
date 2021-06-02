@@ -7,35 +7,98 @@
 	<!-- 카테고리 호출 -->
 	<select id="category" resultType="com.mall.domain.CategoryVO">
 		WITH TBL AS(
-		SELECT '무기' AS cateName , 100 AS cateCode, NULL AS cateCodeRef FROM dual
+		SELECT '무기' AS
+		cateName , 100 AS cateCode, NULL AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '돌격소총' AS cateName , 101 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '돌격소총' AS cateName , 101 AS cateCode, 100 AS cateCodeRef FROM
+		dual
 		UNION ALL
-		SELECT '기관단총' AS cateName , 102 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '기관단총' AS cateName , 102 AS cateCode, 100 AS
+		cateCodeRef FROM dual
 		UNION ALL
-		SELECT '경기관총' AS cateName , 103 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '경기관총' AS cateName , 103 AS
+		cateCode, 100 AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '산탄총' AS cateName , 104 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '산탄총' AS
+		cateName , 104 AS cateCode, 100 AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '지정사수소총' AS cateName , 105 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '지정사수소총' AS cateName , 105 AS cateCode, 100 AS cateCodeRef FROM
+		dual
 		UNION ALL
-		SELECT '저격소총' AS cateName , 106 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '저격소총' AS cateName , 106 AS cateCode, 100 AS
+		cateCodeRef FROM dual
 		UNION ALL
-		SELECT '기타' AS cateName , 107 AS cateCode, 100 AS cateCodeRef FROM dual
+		SELECT '기타' AS cateName , 107 AS
+		cateCode, 100 AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '탄' AS cateName , 200 AS cateCode, NULL AS cateCodeRef FROM dual
+		SELECT '탄' AS cateName
+		, 200 AS cateCode, NULL AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '방어구' AS cateName , 300 AS cateCode, NULL AS cateCodeRef FROM dual
+		SELECT '방어구'
+		AS cateName , 300 AS cateCode, NULL AS cateCodeRef FROM dual
 		UNION ALL
-		SELECT '회복제' AS cateName , 400 AS cateCode, NULL AS cateCodeRef FROM dual
+		SELECT '회복제' AS cateName , 400 AS cateCode, NULL AS cateCodeRef FROM
+		dual
 		)
 		SELECT 1 AS level, cateName, cateCode, cateCodeRef FROM TBL WHERE
 		cateCodeRef is NULL
 		UNION ALL
-		SELECT 2 AS level, cateName, cateCode, cateCodeRef FROM TBL WHERE
+		SELECT 2 AS level, cateName, cateCode,
+		cateCodeRef FROM TBL WHERE
 		cateCodeRef IS NOT null
 		ORDER BY cateCode
 	</select>
+
+
+	<!-- 상품 등록 -->
+	<insert id="register">
+		INSERT INTO tbl_goods(gdsNum, gdsName, cateCode,
+		gdsPrice, gdsStock, gdsDes)
+		VALUES(NEXTVAL(tbl_goods_seq), #{gdsName},
+		#{cateCode},
+		#{gdsPrice}, #{gdsStock}, #{gdsDes})
+	</insert>
+
+	<!-- 상품 목록 -->
+	<select id="goodslist" resultType="com.mall.domain.GoodsVO">
+		SELECT gdsNum, gdsName,
+		cateCode, gdsPrice, gdsStock, gdsDes, gdsImg, gdsDate
+		FROM tbl_goods
+		ORDER BY gdsNum desc
+	</select>
+
+	<!-- 상품 조회 -->
+	<!-- <select id="goodsview" resultType="com.mall.domain.GoodsVO"> SELECT 
+		gdsNum, gdsName, cateCode, gdsPrice, gdsStock, gdsDes, gdsImg, gdsDate FROM 
+		tbl_goods WHERE gdsNum = #{gdsNum} </select> -->
+
+	<!-- 상품조회 + 카테고리 조인 -->
+	<select id="goodsview" resultType="com.mall.domain.GoodsViewVO">
+		SELECT g.gdsNum, g.gdsName,
+		g.cateCode, c.cateCodeRef,
+		c.cateName, gdsPrice, gdsStock, gdsDes,
+		gdsImg, gdsDate
+		FROM tbl_goods g
+		INNER JOIN
+		goods_category c
+		ON g.cateCode
+		= c.cateCode
+		WHERE g.gdsNum = #{gdsNum};
+	</select>
+
+	<!-- 상품 수정 -->
+	<update id="goodsModify">
+		UPDATE tbl_goods
+		SET
+		gdsName= #{gdsName},
+		cateCode= #{cateCode},
+		gdsPrice= #{gdsPrice},
+		gdsStock= #{gdsStock},
+		gdsDes= #{gdsDes}
+		WHERE
+		gdsNum= ${gdsNum}
+	</update>
+
 
 </mapper>
 
